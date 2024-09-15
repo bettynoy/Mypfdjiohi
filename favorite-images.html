@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกภาพที่ชอบ</title>
+<font face="SF Thonburi">
+    <link rel="stylesheet" href="favorite-imagesstyles.css">
+    <!-- ลิงก์ไปยังฟอนต์ Roboto จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MyAlbum</div>
+            <div class="navbar-menu">
+                <a href="C:\Users\PACKAGE\Documents\Niko/index.html">หน้าหลัก</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/index2.html">อัลบั้มทั้งหมด</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/share.html">แชร์</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/settings.html">การตั้งค่า</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/index.html" class="active">เลือกภาพที่ชอบ</a>
+            </div>
+        </nav>
+        <main class="content">
+            <header class="content-header">
+                <h1>เลือกภาพที่ชอบ</h1>
+            </header>
+            <section class="content-body">
+                <form class="upload-form">
+                    <label for="file-upload" class="upload-label">เลือกหรืออัปโหลดภาพ:</label>
+                    <input type="file" id="file-upload" name="file-upload" accept="image/*" required>
+                    
+                    <button type="submit" class="upload-button">อัปโหลดภาพ</button>
+                </form>
+                <div class="selected-images">
+                    <h2>ภาพที่เลือก:</h2>
+                    <div id="image-preview" class="image-preview">
+                        <!-- ตัวอย่างภาพ -->
+                        <img src="https://via.placeholder.com/300" alt="ภาพตัวอย่าง" class="preview-image">
+                        <p>ไม่มีภาพที่เลือก</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const imagePreview = document.getElementById('image-preview');
+            const previewImage = imagePreview.querySelector('.preview-image');
+            const previewText = imagePreview.querySelector('p');
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                    previewText.style.display = 'none';
+                };
+                
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.style.display = 'none';
+                previewText.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

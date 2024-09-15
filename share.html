@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แชร์อัลบั้ม</title>
+<font face="SF Thonburi">
+    <link rel="stylesheet" href="styles.css">
+    <!-- ลิงก์ไปยังฟอนต์ Roboto จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MyAlbum</div>
+            <div class="navbar-menu">
+                <a href="C:\Users\PACKAGE\Documents\Niko/index.html">หน้าหลัก</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/index2.html">อัลบั้มทั้งหมด</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/share.html">แชร์</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/settings.html">การตั้งค่า</a>
+            </div>
+        </nav>
+        <main class="content">
+            <header class="content-header">
+                <h1>แชร์อัลบั้ม</h1>
+            </header>
+            <section class="content-body">
+                <form class="share-form">
+                    <label for="album-name">ชื่ออัลบั้ม:</label>
+                    <input type="text" id="album-name" name="album-name" placeholder="กรอกชื่ออัลบั้ม" required>
+                    
+                    <label for="email">อีเมลของผู้รับ:</label>
+                    <input type="email" id="email" name="email" placeholder="กรอกอีเมล" required>
+                    
+                    <label for="message">ข้อความ:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="กรอกข้อความของคุณ" required></textarea>
+                    
+                    <button type="submit" class="share-button">แชร์อัลบั้ม</button>
+                </form>
+                <div class="social-share">
+                    <p>แชร์ไปยังโซเชียลมีเดีย:</p>
+                    <a href="#" class="social-button facebook">Facebook</a>
+                    <a href="#" class="social-button twitter">Twitter</a>
+                    <a href="#" class="social-button instagram">Instagram</a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

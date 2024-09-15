@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การตั้งค่า</title>
+<font face="SF Thonburi">
+    <link rel="stylesheet" href="stylessettings.css">
+    <!-- ลิงก์ไปยังฟอนต์ Roboto จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">MyAlbum</div>
+            <div class="navbar-menu">
+                <a href="C:\Users\PACKAGE\Documents\Niko/index.html">หน้าหลัก</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/index2.html">อัลบั้มทั้งหมด</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/share.html">แชร์</a>
+                <a href="C:\Users\PACKAGE\Documents\Niko/settings.html">การตั้งค่า</a>
+            </div>
+        </nav>
+        <main class="content">
+            <header class="content-header">
+                <h1>การตั้งค่า</h1>
+            </header>
+            <section class="content-body">
+                <form class="settings-form">
+                    <fieldset>
+                        <legend>การจัดการบัญชี</legend>
+                        <label for="username">ชื่อผู้ใช้:</label>
+                        <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้" required>
+                        
+                        <label for="email">อีเมล:</label>
+                        <input type="email" id="email" name="email" placeholder="กรอกอีเมล" required>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>เปลี่ยนรหัสผ่าน</legend>
+                        <label for="current-password">รหัสผ่านปัจจุบัน:</label>
+                        <input type="password" id="current-password" name="current-password" placeholder="กรอกรหัสผ่านปัจจุบัน" required>
+                        
+                        <label for="new-password">รหัสผ่านใหม่:</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="กรอกรหัสผ่านใหม่" required>
+                        
+                        <label for="confirm-password">ยืนยันรหัสผ่านใหม่:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="ยืนยันรหัสผ่านใหม่" required>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>การตั้งค่าการแจ้งเตือน</legend>
+                        <label for="email-notifications">การแจ้งเตือนทางอีเมล:</label>
+                        <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                        
+                        <label for="sms-notifications">การแจ้งเตือนทาง SMS:</label>
+                        <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                    </fieldset>
+                    
+                    <button type="submit" class="save-button">บันทึกการตั้งค่า</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
